@@ -11,21 +11,21 @@ function heredaDe (prototipoHijo, prototipoPadre) {
     prototipoHijo.prototype.constructor = prototipoHijo
     }
     
-    function Person(nombre, apellido, altura) {
+function Person(nombre, apellido, altura) {
         this.nombre = nombre
         this.apellido = apellido
         this.altura = altura
-      }
+    }
     
-      Person.prototype.saludar = function(){
-        console.log(Hola, me llamo ${this.nombre}${this.apellido} )
+Person.prototype.saludar = function(){
+        console.log( `Hola, me llamo ${this.nombre}${this.apellido}`)
       };
     
       Person.prototype.soyAlto = function(){
         if(this.altura >= 1.80) {
-          console.log(soy alto, mido ${this.altura})
+          console.log(`soy alto, mido ${this.altura}`)
         }else{
-          console.log(soy un hobit, mido ${this.altura})
+          console.log(`soy un hobit, mido ${this.altura}`)
         }
       };
     
@@ -37,7 +37,7 @@ function heredaDe (prototipoHijo, prototipoPadre) {
       heredaDe (Desarrollador, Person)
     
       Desarrollador.prototype.saludar = function () {
-        console.log(Hola me llamo ${this.nombre} ${this.apellido} y soy desarrollador/a)
+        console.log(`Hola me llamo ${this.nombre} ${this.apellido} y soy desarrollador/a`)
       }
     
       
